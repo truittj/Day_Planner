@@ -45,39 +45,25 @@ for (var i = 0; i < hourArray.length; i++) {
   var textarea = $("<textarea>");
   //<textarea></textarea>
 
-  //how do you know when it is present (currentHour and hourArray[i])
-  //how do you know when it it past
-  //how do you know when it is future
-
-  //addressed below, but I cannot figure how to phrase the variable at [i]
-  //code I cannot figure out.... prob missing something dumb
-
   if (hourArray[i] == currentHour) {
     textarea.attr("class", "form-control col-8 present");
   }
-
   if (hourArray[i] < currentHour) {
     textarea.attr("class", "form-control col-8 past");
   }
   if (hourArray[i] > currentHour) {
     textarea.attr("class", "form-control col-8 future");
   }
-
-  //textarea.attr("class", "form-control col-8");
   textarea.attr("id", hourArray[i]);
 
   var d3 = $("<div>");
   d3.attr("class", "col saveBtn text-center fas fa-lock");
-  //<div></div>
 
   d1.append(d2);
   d1.append(textarea);
   d1.append(d3);
 
   $(".container").append(d1);
-
-  //d2.text(hourArray[i]);
-  //d1.append(d1);
 }
 
 //3. setting data local storage (recommended grab hour and set to userinput)
